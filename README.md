@@ -10,4 +10,4 @@
 
 ### 1.2 Generator
 
-``ui2py.py -i <project_dir>/window/ui -o <project_dir>/window/``
+``ui2py.py -d <project_dir>/window/ui``
