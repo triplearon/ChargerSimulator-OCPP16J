@@ -1,14 +1,13 @@
-from PyQt5 import *
-from PyQt5 import QtWidgets
-from window.MainWindow import MainWindow
-
-import os
 import sys
+import random
+
+from PySide6 import QtWidgets, QtCore, QtGui
+from src.window.main_window import MainWindow
 
 if __name__ == '__main__':
-    app = QtWidgets.QApplication(sys.argv)
-    mainWindow = MainWindow()
-    mainWindow.show()
+    app = QtWidgets.QApplication([])
 
-    app.exec_()
-    sys.exit(0)
+    window = MainWindow()
+    window.show()
+
+    sys.exit(app.exec())

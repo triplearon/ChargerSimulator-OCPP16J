@@ -1,7 +1,6 @@
 import getopt
 import sys
-
-import PyQt5.uic as uic
+import os
 
 if __name__ == '__main__':
     ui_dir = ""
@@ -22,4 +21,9 @@ if __name__ == '__main__':
         print("ui2py.py -d <ui_dir>")
         sys.exit(2)
 
-    uic.compileUiDir(ui_dir)
+    for files in os.listdir(ui_dir):
+        if files.endswith(".ui"):
+            ui_file = os.path.join(ui_dir, files)
+            py_file = os.path.join(ui_dir, "ui_" + files.replace(".ui", ".py"))
+            print(f"UIC: {ui_file}, {py_file}")
+            os.system(f"pyside6-uic {ui_file} -o {py_file}")
