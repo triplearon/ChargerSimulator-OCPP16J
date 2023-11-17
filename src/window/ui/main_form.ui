@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>798</width>
-    <height>611</height>
+    <width>878</width>
+    <height>603</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,59 +19,27 @@
      <rect>
       <x>10</x>
       <y>80</y>
-      <width>121</width>
+      <width>191</width>
       <height>481</height>
      </rect>
     </property>
+    <property name="editTriggers">
+     <set>QAbstractItemView::NoEditTriggers</set>
+    </property>
+    <property name="batchSize">
+     <number>16</number>
+    </property>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>10</x>
       <y>0</y>
-      <width>781</width>
-      <height>71</height>
+      <width>861</width>
+      <height>73</height>
      </rect>
     </property>
-    <layout class="QHBoxLayout" name="horizontalLayout" stretch="0,1,0,1,0,1,0,1,1">
-     <item>
-      <widget class="QLabel" name="label_2">
-       <property name="font">
-        <font>
-         <family>Consolas</family>
-        </font>
-       </property>
-       <property name="text">
-        <string>Domain:</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLineEdit" name="domainLineEdit">
-       <property name="text">
-        <string/>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="label_3">
-       <property name="font">
-        <font>
-         <family>Consolas</family>
-        </font>
-       </property>
-       <property name="text">
-        <string>Path:</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLineEdit" name="pathLineEdit">
-       <property name="text">
-        <string/>
-       </property>
-      </widget>
-     </item>
+    <layout class="QHBoxLayout" name="horizontalLayout" stretch="0,0,0">
      <item>
       <widget class="QLabel" name="label">
        <property name="font">
@@ -80,53 +48,17 @@
         </font>
        </property>
        <property name="text">
-        <string>OCPP ID:</string>
+        <string>OCPP Server Url:</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="ocppIdLineEdit">
-       <property name="text">
-        <string/>
-       </property>
-      </widget>
+      <widget class="QLineEdit" name="urlLineEdit"/>
      </item>
      <item>
-      <widget class="QLabel" name="label_4">
-       <property name="font">
-        <font>
-         <family>Consolas</family>
-        </font>
-       </property>
-       <property name="text">
-        <string>Port:</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLineEdit" name="portLineEdit">
-       <property name="text">
-        <string/>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <layout class="QVBoxLayout" name="verticalLayout" stretch="1,3">
+      <layout class="QVBoxLayout" name="verticalLayout" stretch="1">
        <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_2">
-         <item>
-          <spacer name="horizontalSpacer">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>40</width>
-             <height>20</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
+        <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="0,5,1">
          <item>
           <widget class="QPushButton" name="connectButton">
            <property name="text">
@@ -137,6 +69,16 @@
              <width>8</width>
              <height>8</height>
             </size>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="connectPromptLabel">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
            </property>
           </widget>
          </item>
@@ -155,13 +97,6 @@
          </item>
         </layout>
        </item>
-       <item>
-        <widget class="QLabel" name="connectPrompt">
-         <property name="text">
-          <string/>
-         </property>
-        </widget>
-       </item>
       </layout>
      </item>
     </layout>
@@ -172,19 +107,13 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>798</width>
+     <width>878</width>
      <height>22</height>
     </rect>
    </property>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <tabstops>
-  <tabstop>domainLineEdit</tabstop>
-  <tabstop>pathLineEdit</tabstop>
-  <tabstop>ocppIdLineEdit</tabstop>
-  <tabstop>portLineEdit</tabstop>
- </tabstops>
  <resources/>
  <connections/>
 </ui>
