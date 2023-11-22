@@ -4,10 +4,14 @@
 
 ### 1.1 Requirement
 
-> 1. Python, Ver >= 3.9
-> 2. PyQt5, Ver = 5.15.*
-> 3. pyqt5-tools, Ver = 5.15.*
+> 1. Python, Ver >= 3.10
 
-### 1.2 Generator
+### 1.2 Install
+
+``pip install pyside6``
+
+``pip install websocket-client``
+
+### 1.3 Generator
 
 ``ui2py.py -d <project_dir>/window/ui``

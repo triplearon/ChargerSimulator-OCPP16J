@@ -3,6 +3,12 @@ import sys
 import os
 
 if __name__ == '__main__':
+
+    # check pyside6-uic
+    if os.system("pyside6-uic -h > nul") != 0:
+        print("Please install pyside6-uic first!")
+        sys.exit(2)
+
     ui_dir = ""
     try:
         opts, args = getopt.getopt(sys.argv[1:], "hd:", ["dir="])
